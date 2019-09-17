@@ -10,12 +10,21 @@ export class HelloComponent {
    topics : string[] = ['Data Binding','Forms','Http','Routing']
 
    addTopic(value : string) {
-       this.topics.push(value)
+       // check whether value is already present
+       var pos = this.topics.indexOf(value)
+       if (pos == -1)  // Not found
+           this.topics.push(value)
+       else
+           alert("Topic already exists!")
    }
 
-//    deleteTopic()
-//    {
-
-//    }
+    deleteTopic(value : string)
+    {
+        var pos = this.topics.indexOf(value)
+        if (pos >= 0)  //found
+            this.topics.splice(pos,1)
+        else
+            alert("Sorry! Topic not found!")
+    }
 }
 

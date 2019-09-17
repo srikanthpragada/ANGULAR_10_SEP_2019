@@ -2,7 +2,8 @@
 
 <h2>Topics</h2>
 Here are topics in Angular {{version}}.
-
+<p></p>
+No. of topics : {{topics.length}}
 <ul>
     <li *ngFor="let t of topics">
         {{t}}
@@ -10,4 +11,5 @@ Here are topics in Angular {{version}}.
 </ul>
 
 Topic : <input type="text" #topic>
-<button (click)="addtopic(topic.value)">Add</button>
+<button (click)="addTopic(topic.value)">Add</button>
+<button (click)="deleteTopic(topic.value)">Del</button>

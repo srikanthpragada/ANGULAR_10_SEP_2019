@@ -1,0 +1,33 @@
+<style>
+.odd { background-color:silver;color:red }
+.even{ background-color:red;color:white } 
+</style>
+
+<h2>Directives Demo</h2>
+
+<input type="checkbox" #ismore  (click)="true">More Details 
+
+<p></p>
+<div *ngIf="ismore.checked; then more; else less">
+</div>
+<ng-template #more> 
+    <h1>More Details</h1>
+</ng-template>
+
+<ng-template #less> 
+    <h2>Few Details</h2>
+</ng-template>
+
+<div *ngFor="let n of names;let idx = index;let oddrow = odd">
+   <span [style.color] = "oddrow ? 'red' : 'green'">{{idx+1}}.{{n}} </span>
+   <br/>
+   <span [class.odd] = "oddrow"  [class.even]="!oddrow">{{idx+1}}.{{n}} </span>
+</div>
+
+<p></p>
+<select #name>
+    <option *ngFor="let n of names">
+          {{n}}
+    </option>
+</select>
+

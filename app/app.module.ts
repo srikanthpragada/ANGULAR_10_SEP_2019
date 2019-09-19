@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { DirDemoComponent } from './dirdemo/dirdemo.component';
+import { Table2Component } from './table/table2.component';
 
 
 @NgModule({
   declarations: [
-    DirDemoComponent
+    Table2Component
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [DirDemoComponent ]
+  bootstrap: [Table2Component ]
 })
 export class AppModule { }

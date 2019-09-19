@@ -1,0 +1,21 @@
+<h2>Table</h2>
+
+Number : 
+<select #number>
+      <option *ngFor="let n of numbers">{{n}}</option>
+</select>
+
+Length :
+<select #length>
+        <option *ngFor="let n of [10,15,20]">{{n}}</option>
+</select>
+&nbsp;
+<button (click)="createTable(length.value)">Go</button>
+<p></p>
+<table>
+    <tr *ngFor="let v of result; let idx = index">
+          <td> {{number.value}} * </td>
+          <td> {{idx + 1  | number : '2.0'}}  = </td>
+          <td> {{ (number.value * (idx + 1) ) | number :'3.0'}} </td>
+    </tr>
+</table>

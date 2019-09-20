@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Table2Component } from './table/table2.component';
+import { FirstComponent } from './icc/first.component';
+import { SecondComponent } from './icc/second.component';
+
 
 
 @NgModule({
   declarations: [
-    Table2Component
+     FirstComponent, SecondComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [Table2Component ]
+  bootstrap: [FirstComponent]
 })
 export class AppModule { }

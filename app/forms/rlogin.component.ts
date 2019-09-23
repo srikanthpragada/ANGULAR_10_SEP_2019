@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 
 @Component({
     selector: 'st-login',
-    templateUrl: './rlogin.component2.html'
+    templateUrl: './rlogin.component.html'
 })
 export class RLoginComponent {
     loginForm: FormGroup;
@@ -26,7 +26,6 @@ export class RLoginComponent {
             console.log(this.loginForm.controls["username"].value);
             console.log(this.loginForm.value["username"]);
         }
-
     }
 
     //  Must return null on success, object on error 

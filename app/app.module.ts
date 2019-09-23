@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule} from '@angular/forms'
-import { RegisterComponent } from './forms/register.component';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { RLoginComponent } from './forms/rlogin.component';
 
 
 
 @NgModule({
   declarations: [
-      RegisterComponent
+      RLoginComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [RegisterComponent]
+  bootstrap: [RLoginComponent]
 })
 export class AppModule { }

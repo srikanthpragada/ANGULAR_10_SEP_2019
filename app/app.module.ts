@@ -1,18 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms'
-import { RLoginComponent } from './forms/rlogin.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { WebBooksComponent } from './http/webbooks.component';
+import { AddBookComponent } from './http/add-book.component';
+import { WebBooks2Component } from './http/webbooks2.component.';
+
 
 
 
 @NgModule({
   declarations: [
-      RLoginComponent
+      WebBooks2Component
   ],
   imports: [
-    BrowserModule, FormsModule, ReactiveFormsModule
+    BrowserModule, HttpClientModule,FormsModule
   ],
   providers: [],
-  bootstrap: [RLoginComponent]
+  bootstrap: [WebBooks2Component]
 })
 export class AppModule { }
